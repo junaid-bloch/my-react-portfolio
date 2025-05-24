@@ -30,6 +30,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './navbarstyles.css';
+import { FaHome } from "react-icons/fa";
 
 function Navbar() {
   return (
@@ -38,42 +39,45 @@ function Navbar() {
       <div className="container">
         <header>
           <Link to="/">
-            <h1 className="logo" data-aos="fade-down" data-aos-duration="1500">
-              Junu
+            <h1 className="logo" >
+<FaHome />
             </h1>
           </Link>
           <nav>
             <ul>
               <li>
-                <Link to="/Aboutme" data-aos="fade-down" data-aos-duration="1500">
+                <Link to="/Aboutme" >
                   ABOUT ME
                 </Link>
               </li>
               <li>
-                <Link to="/Skills" data-aos="fade-down" data-aos-duration="2000">
+                <Link to="/Skills">
                   SKILLS
                 </Link>
               </li>
               <li>
-                <Link to="/Projects" data-aos="fade-down" data-aos-duration="2500">
+                <Link to="/Projects" >
                   PROJECTS
                 </Link>
               </li>
               <li>
-                <Link to="/Achievements" data-aos="fade-down" data-aos-duration="3000">
+                <Link to="/Achievements" >
                   ACHIEVEMENTS
+                </Link>
+              </li>
+            <li>
+                <Link to="/Contactform" >
+                  CONTACT ME
                 </Link>
               </li>
             </ul>
           </nav>
           <a
-            href="./public/Resume.pdf"
-            download
-            className="btn-resume"
-            data-aos="fade-down"
-            data-aos-duration="1500"
+            href="/public/Resume.pdf"
+            download = "Resume.pdf"
+            className="btn-resume align-center"
           >
-            Resume
+            HIRE ME
           </a>
         </header>
       </div>

@@ -36,7 +36,7 @@ header {
 }
 
 header:hover {
-  background: rgba(0, 0, 0, 0.9);
+  background: rgb(0, 0, 0);
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -50,7 +50,7 @@ header:hover {
 }
 
 .logo:hover {
-  color: #555962;
+  color: #797c81;
 }
 
 /* Navigation Styles */
@@ -73,7 +73,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background: rgba(62, 62, 62, 0.1);
+  background: rgba(88, 88, 88, 0.1);
   color: #ffffff;
 }
 

@@ -1,0 +1,513 @@
+/* Contact Page CSS - Dark Mode */
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: #e5e5e5;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Container */
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Header Section */
+.contact-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+}
+
+.contact-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.contact-header p {
+  font-size: 1.125rem;
+  color: #d1d5db;
+  max-width: 32rem;
+  margin: 0 auto;
+  line-height: 1.75;
+}
+
+/* Content Grid */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* Form Section */
+.contact-form-section {
+  background: rgba(31, 41, 55, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 2rem;
+  border-radius: 0.75rem;
+  border: 1px solid #374151;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Messages */
+.success-message {
+  background: rgba(34, 197, 94, 0.2);
+  border: 1px solid #22c55e;
+  color: #4ade80;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.error-message {
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid #ef4444;
+  color: #f87171;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.message-hidden {
+  display: none;
+}
+
+/* Form Styles */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  display: block;
+  color: #ffffff;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: #374151;
+  border: 1px solid #4b5563;
+  border-radius: 0.5rem;
+  color: #e5e5e5;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.2);
+  transform: scale(1.02);
+}
+
+.form-input:hover,
+.form-textarea:hover {
+  transform: scale(1.02);
+}
+
+.form-textarea {
+  resize: none;
+  min-height: 120px;
+}
+
+.form-textarea::placeholder {
+  color: #9ca3af;
+}
+
+/* Submit Button */
+.submit-button {
+  width: 100%;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.25);
+}
+
+.submit-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submit-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Contact Info Section */
+.contact-info-section {
+  background: rgba(31, 41, 55, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 2rem;
+  border-radius: 0.75rem;
+  border: 1px solid #374151;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem;
+  background: rgba(55, 65, 81, 0.5);
+  border-radius: 0.5rem;
+  border: 1px solid #4b5563;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-item:hover {
+  transform: translateX(8px);
+  background: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.contact-icon {
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.contact-item:hover .contact-icon {
+  transform: scale(1.1);
+}
+
+.contact-details h3 {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-bottom: 0.25rem;
+}
+
+.contact-details p {
+  color: #d1d5db;
+  white-space: pre-line;
+}
+
+/* Support Section */
+.support-section {
+  background: rgba(31, 41, 55, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 2rem;
+  border-radius: 0.75rem;
+  border: 1px solid #374151;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.support-section h2 {
+  color: #ffffff;
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.support-section p {
+  color: #d1d5db;
+  margin-bottom: 2rem;
+  max-width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.75;
+}
+
+/* Support Buttons */
+.support-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.coffee-button {
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.coffee-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(249, 115, 22, 0.25);
+}
+
+.coffee-button:active {
+  transform: translateY(0);
+}
+
+.tea-button {
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tea-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.25);
+}
+
+.tea-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 1rem;
+  }
+  
+  .contact-header h1 {
+    font-size: 2rem;
+  }
+  
+  .contact-header p {
+    font-size: 1rem;
+  }
+  
+  .contact-form-section,
+  .contact-info-section,
+  .support-section {
+    padding: 1.5rem;
+  }
+  
+  .support-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .coffee-button,
+  .tea-button {
+    width: 100%;
+    max-width: 200px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-header h1 {
+    font-size: 1.75rem;
+  }
+  
+  .contact-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .contact-icon {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+  
+  .support-section h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar for Dark Theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* Focus Styles for Accessibility */
+.form-input:focus,
+.form-textarea:focus,
+.submit-button:focus,
+.coffee-button:focus,
+.tea-button:focus {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
+}
+
+/* Animation Classes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Loading Animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.loading {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Utility Classes */
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.gap-1 {
+  gap: 0.25rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
